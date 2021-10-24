@@ -24,7 +24,7 @@ public class JacksonProgram {
         CsvSchema bootstrap = CsvSchema.emptySchema().withHeader();
         CsvMapper csvMapper = new CsvMapper();
         MappingIterator<Map<?, ?>> mappingIterator = csvMapper.reader(Map.class).with(bootstrap).readValues(file);
-
+System.out.println("added");
         return mappingIterator.readAll();
     }
 
